@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc Solutions - Learning Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+
+        header h1 {
+            color: #1a73e8;
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
+
+        header p {
+            color: #666666;
+            font-size: 14px;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #202124;
+            border-bottom: 2px solid #1a73e8;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #444444;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #1a73e8;
+            outline: none;
+        }
+
+        .inline-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-weight: normal;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .button-group {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button[type="submit"] {
+            background-color: #1a73e8;
+            color: white;
+            margin-right: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #1557b0;
+        }
+
+        button[type="reset"] {
+            background-color: #f1f3f4;
+            color: #3c4043;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #e8eaed;
+        }
+
+        .media-item {
+            margin-bottom: 15px;
+        }
+
+        .media-item p {
+            font-size: 14px;
+            color: #555555;
+            margin-bottom: 5px;
+        }
+
+        audio, video {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #777777;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+	
+        <header>
+            <h1>Arc Solutions</h1>
+            <p>Welcome to my HTML learning website!</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Student Registration</h2>
+                <form action="#" method="get">
+                    
+                    <div class="form-group">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentnum">Student Number:</label>
+                        <input type="text" id="studentnum" name="studentnum" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Choose Your Course:</label>
+                        <select id="course" name="course">
+                            <option value="BSIT">BS Information Technology</option>
+                            <option value="BSCS">BS Computer Science</option>
+                            <option value="BSIS">BS Information Systems</option>
+                            <option value="BSEMC">BS Entertainment and Multimedia Computing</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Learning Method:</label>
+                        <label class="inline-group">
+                            <input type="radio" id="video" name="method" value="video"> Video
+                        </label>
+                        <label class="inline-group">
+                            <input type="radio" id="reading" name="method" value="reading"> Reading
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Topics of Interest:</label>
+                        <label class="inline-group">
+                            <input type="checkbox" id="html" name="interest" value="HTML"> HTML
+                        </label>
+                        <label class="inline-group">
+                            <input type="checkbox" id="css" name="interest" value="CSS"> CSS
+                        </label>
+                        <label class="inline-group">
+                            <input type="checkbox" id="js" name="interest" value="JavaScript"> JavaScript
+                        </label>
+                        <label class="inline-group">
+                            <input type="checkbox" id="git" name="interest" value="Git"> Git & Version Control
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Comments:</label>
+                        <textarea id="comments" name="comments" rows="4" cols="35"></textarea>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit">Register</button>
+                        <button type="reset">Clear</button>
+                    </div>
+                </form>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Listen to the Lessons</h2>
+                
+                <div class="media-item">
+                    <p>Listen to the audio lesson below.</p>
+                    <audio controls>
+                        <source src="media/lesson.mp3" type="audio/mpeg">
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+
+                <div class="media-item">
+                    <p>Listen to the second audio lesson below.</p>
+                    <audio controls>
+                        <source src="media/lesson2.mp3" type="audio/mpeg">
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Watch the Lesson</h2>
+                <div class="media-item">
+                    <p>Watch the instructional video below.</p>
+                    <video width="600" controls>
+                        <source src="media/lesson.mp4" type="video/mp4">
+                        Your browser does not support video.
+                    </video>
+                </div>
+            </section>
+        </main>
+
+        <!-- Semantic Footer -->
+        <footer>
+            <p>&copy; 2026 Arc Solutions. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
